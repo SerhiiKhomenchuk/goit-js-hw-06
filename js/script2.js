@@ -15,6 +15,7 @@ const ingredients = [
 ]; 
 const listById = document.querySelector("#ingredients")
 // console.log(listById);
+const arr = []
 const list = ingredients.map(ingredient => {
     
     // console.log(ingredient);
@@ -23,8 +24,12 @@ const list = ingredients.map(ingredient => {
     listItem.classList.add("item")
     // console.log(listItem);
     
-    listItem.textContent = ingredient
-    return listById.append(listItem)
+  listItem.textContent = ingredient
+  arr.push(listItem)
+    // return listById.append(listItem)
 });
+// console.log(arr);
+listById.append(...arr)
+// console.log(listById.children);
 
 
